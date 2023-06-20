@@ -22,10 +22,11 @@ function studentGradeGenerator() {
     }else if (marks >= 40 && marks <= 49){ 
         // if marks are between 40 and 49, assign grade D
         grade = "D";
-    } else {
-         // if marks are less than 40, assign grade E
-        grade = "E";
+    } else if(isNaN (marks)){
+         return "invalid"
     }
-
+     else {
+        return "E"
+     }
     return `Grade: ${grade}`; // return statement that displays the final grade based on the entered marks
 }
